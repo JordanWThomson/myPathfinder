@@ -5,6 +5,7 @@ pygame.font.init()
 
 windowWidth = 500
 cellWidth = 10
+totalRows = windowWidth//cellWidth
 menuBarHeight = 100
 myWindow = pygame.display.set_mode((windowWidth, windowWidth + menuBarHeight))
 myIcon = pygame.image.load(os.path.join("../Assets", "Icon.png")).convert_alpha()

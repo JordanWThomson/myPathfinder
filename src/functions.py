@@ -13,9 +13,9 @@ def makeGrid():
     Function that generates a grid of cell objects.
     """
     myGrid = []
-    for row in range(gv.windowWidth//gv.cellWidth):
+    for row in range(gv.totalRows):
         myGrid.append([]) #add new empty list per row.
-        for collumn in range(gv.windowWidth//gv.cellWidth):
+        for collumn in range(gv.totalRows):
             newCell = classes.Cell(row, collumn, gv.cellWidth)
             myGrid[row].append(newCell)
             
@@ -136,7 +136,7 @@ def drawWindow(grid, textList, textRectList, statesDict):
             cell.drawCell()
     
     #Draw grid lines over the cells.
-    for i in range(gv.windowWidth//gv.cellWidth):
+    for i in range(gv.totalRows):
         pygame.draw.line(gv.myWindow, 'black', (0, i*gv.cellWidth), (gv.windowWidth, i*gv.cellWidth))
         pygame.draw.line(gv.myWindow, 'black', (i*gv.cellWidth, 0), (i*gv.cellWidth, gv.windowWidth))
 
