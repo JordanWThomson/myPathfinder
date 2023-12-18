@@ -49,6 +49,14 @@ class Cell:
             for j in range(3):
                 if i == 1 and j == 1:
                     continue
-                elif (self.row > 0 and self.row < gv.windowWidth//gv.cellWidth - 1) and (self.col > 0 and self.col < gv.windowWidth//gv.cellWidth - 1):  #Check if neighbour within grid bounds.
+                elif self.row + i - 1 in range(gv.totalRows) and self.col + j - 1 in range(gv.totalRows):
+                    validNeighbourCell = grid[self.row + i - 1][self.col + j -1]
+                    self.neighbourCells.append(validNeighbourCell)
+            
+                """
+                if i == 1 and j == 1:
+                    continue
+                elif (self.row > 0 and self.row < gv.windowWidth//gv.cellWidth - 1) and (self.col > 0 and self.col < gv.totalRows):  #Check if neighbour within grid bounds.
                     if not grid[self.row + i - 1][self.col + j - 1].isBarrier():
-                        self.neighbourCells.append(grid[self.row + i - 1][self.col + j - 1])   
+                        self.neighbourCells.append(grid[self.row + i - 1][self.col + j - 1])   ]
+                """
