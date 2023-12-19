@@ -1,26 +1,3 @@
-import os
-from PIL import Image
-
-#myImage = Image.open(os.path.join("../Assets", "mazePreset.png"))
-#pix = myImage.load()
-#print(myImage.size)
-#print(pix[0,0])
-
-"""
-preset_1 = []
-for i in range(myImage.size[0]):
-    preset_1.append([])
-    for j in range(myImage.size[1]):
-        pix = myImage.load()
-        if pix[i, j] == (0, 0, 0, 255):
-            preset_1[i].append(3)
-        else:
-            preset_1[i].append(0)
-
-for miniList in preset_1:            
-    print(str(miniList) + ',')
-"""
-
 presetList = []
 
 preset_1 = [
